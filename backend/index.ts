@@ -18,6 +18,9 @@ io.on("connection", (socket) => {
   console.log(socket.id);
 });
 
+import connectiontodb from "./config/connection";
+connectiontodb();
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
