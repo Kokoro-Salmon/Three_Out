@@ -1,7 +1,16 @@
 import { getUser } from "../service/auth";
 import { Request, Response, NextFunction } from 'express';
 
-const restrictToLoggedInUserOnly = (req: Request, res: Response, next:NextFunction) => {
+type User = {
+  name : string;
+  email : string;
+}
+
+interface CustomRequest extends Request {
+  user?: User;
+}
+
+const restrictToLoggedInUserOnly = (req: CustomRequest, res: Response, next:NextFunction) => {
   const userUID = req.cookies.uid;
 
   if (!userUID) {
