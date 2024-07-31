@@ -9,6 +9,7 @@ const connectiontodb = async () => {
       dbName: "UsersInMpGame",
     });
     console.log("DB connected successfully");
+    console.log("Sahi me connect ho gaya database bharosa rakh");
   } catch (error) {
     console.error("Error connecting to the database", error);
   }

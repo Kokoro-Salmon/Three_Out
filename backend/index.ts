@@ -4,6 +4,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import http from "http";
 import { Server } from "socket.io";
+// import { restrictToLoggedInUserOnly } from "./middleware/auth";
 
 const app = express();
 const server = http.createServer(app);
@@ -17,6 +18,8 @@ const io = new Server(server, {
 io.on("connection", (socket) => {
   console.log(socket.id);
 });
+
+import userRouter from "./routes/UserRoutes";
 
 import connectiontodb from "./config/connection";
 connectiontodb();
@@ -32,6 +35,9 @@ app.use(
   })
 );
 
+// Router ehter Daalna Warna kudh confuse hoga tu
+app.use("/User", userRouter);
+
 app.get("/", (req: Request, res: Response) => {
   res.send("Server Chalu Ho Gaya");
 });
@@ -40,4 +46,3 @@ server.listen(3000, () => {
   console.log("Server is listening on PORT: 3000");
   console.log("http://localhost:3000/");
 });
-
