@@ -19,7 +19,9 @@ io.on("connection", (socket) => {
   console.log(socket.id);
 });
 
+// routes are here likh raha hu ki dikh jaye
 import userRouter from "./routes/UserRoutes";
+import statRouter from "./routes/StatsRouter";
 
 import connectiontodb from "./config/connection";
 connectiontodb();
@@ -37,6 +39,7 @@ app.use(
 
 // Router ehter Daalna Warna kudh confuse hoga tu
 app.use("/User", userRouter);
+app.use("/Stats", statRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Server Chalu Ho Gaya");

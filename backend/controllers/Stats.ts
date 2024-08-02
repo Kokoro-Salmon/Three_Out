@@ -80,3 +80,20 @@ export const tieStatsUpdate = async (req: Request, res: Response) => {
     return res.status(500).json({ msg: "tieStatsUpdate Error", error });
   }
 };
+
+export const fetchPlayerStats = async (req: Request, res: Response) => {
+  const { playerID } = req.body;
+
+  try {
+    const statDoc: any = await PlayerStatsSchema.findOne({
+      playerID: playerID,
+    });
+    if (!statDoc) {
+      return res.status(404).json({ msg: "Player not found" });
+    }
+
+    return res.status(200).json({ playerStats: statDoc });
+  } catch (error) {
+    return res.status(500).json({ msg: "tieStatsUpdate Error", error });
+  }
+};
