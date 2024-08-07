@@ -45,7 +45,7 @@ export const deleteFriend = async (req: Request<{}, {}, DeleteFriendRequestBody>
         }
 
         // Use filter to remove the friend with the specified ID
-        result.friendsList = result.friendsList.filter(friend => friend.friendID !== friendID);
+        (result.friendsList as any) = (result.friendsList as any).filter((friend: any) => friend.friendID !== friendID);
 
         console.log('New result after delete friend:', result.friendsList);
 
@@ -121,13 +121,15 @@ export const fetchNotFriends = async (req: Request, res: Response): Promise<Resp
         frnds.set(playerID, "1");
 
         for (const friend of currFriendsList) {
-            frnds.set(friend.friendID, "1");
+            if (friend.friendID) {
+                frnds.set(friend.friendID, "1");
+            }
         }
 
-        const result: User[] = [];
+        const result: any[] = [];
         // Storing not marked ones inside the result
         for (const person of allPeople) {
-            if (!frnds.has(person.playerID)) {
+            if (person.playerID && !frnds.has(person.playerID) && typeof person.playerID === 'string') {
                 result.push(person);
             }
         }
