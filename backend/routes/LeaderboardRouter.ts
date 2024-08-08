@@ -3,6 +3,6 @@ import { fetchAllPlayerStats } from "../controllers/LeaderBoard";
 
 const router: Router = express.Router();
 
-router.post("FetchLeaderboard", fetchAllPlayerStats);
+router.get("/FetchLeaderboard", fetchAllPlayerStats);
 
 export default router;

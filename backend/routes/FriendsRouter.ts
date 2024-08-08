@@ -9,7 +9,7 @@ import {
 const router: Router = express.Router();
 
 router.post("/FetchFriends", fetchFriends);
-router.post("/FetchNotFriends", fetchNotFriends);
+router.post("/FetchNotFriends", fetchNotFriends); //FIx this please
 router.post("/AddFriends", addFriend);
 router.delete("/DeleteFriends", deleteFriend);
 

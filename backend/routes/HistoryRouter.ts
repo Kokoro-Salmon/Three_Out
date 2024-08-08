@@ -6,7 +6,7 @@ import {
 
 const router: Router = express.Router();
 
-router.post("/FetchGamingHistory",fetchGamingHistory);
-router.post("/UpdateGamingHistory",updateGamingHistory);
+router.post("/FetchGamingHistory",fetchGamingHistory); //Testing Done 0 Fails
+router.post("/UpdateGamingHistory",updateGamingHistory);// To be Done Later
 
 export default router;

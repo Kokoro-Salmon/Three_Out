@@ -56,7 +56,7 @@ export const handleUserSignUp = async (req: UserRequest, res: Response) => {
     email: email,
     password: hashedPassword,
     profilePhotoLink: "",
-    PlayerID: newUserID,
+    playerID: newUserID,
   });
 
   //   Check karo if its already present
@@ -152,6 +152,6 @@ export const fetchUserInfo = async (
   res: Response
 ) => {
   const { playerID } = req.body;
-  const user = await UserSchema.findOne({ PlayerID: playerID });
+  const user = await UserSchema.findOne({ playerID: playerID });
   return res.json({ userInfo: user });
 };

@@ -22,6 +22,9 @@ io.on("connection", (socket) => {
 // routes are here likh raha hu ki dikh jaye
 import userRouter from "./routes/UserRoutes";
 import statRouter from "./routes/StatsRouter";
+import friendsRouter from "./routes/FriendsRouter";
+import historyRouter from "./routes/HistoryRouter";
+import leaderboardRouter from "./routes/LeaderboardRouter";
 
 import connectiontodb from "./config/connection";
 connectiontodb();
@@ -38,8 +41,12 @@ app.use(
 );
 
 // Router ehter Daalna Warna kudh confuse hoga tu
-app.use("/User", userRouter);
-app.use("/Stats", statRouter);
+app.use("/User", userRouter);  //testing done && 1 Fail
+app.use("/Stats", statRouter); //testing done 0 Fail
+app.use("/History",historyRouter);// testing done 1 Fail
+app.use("/Leader",leaderboardRouter);// testing done 0 Fail
+app.use("/Friends",friendsRouter);// testing done 1 Fail
+
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Server Chalu Ho Gaya");
