@@ -8,9 +8,9 @@ import {
 
 const router: Router = express.Router();
 
-router.post("/Wins", winStatsUpdate);
-router.post("/Loss", lossStatsUpdate);
-router.post("/Tie", tieStatsUpdate);
-router.post("/FetchStats", fetchPlayerStats);
+router.post("/Wins", winStatsUpdate);  //Wins Testing Done
+router.post("/Loss", lossStatsUpdate);  //Loss Testing Done
+router.post("/Tie", tieStatsUpdate);  //Tie Testing Done
+router.post("/FetchStats", fetchPlayerStats); //Fetch Testing Done
 
 export default router;
