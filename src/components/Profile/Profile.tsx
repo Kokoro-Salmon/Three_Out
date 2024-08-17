@@ -4,7 +4,8 @@ type Props = {}
 
 const Profile = (props: Props) => {
   return (
-    <div>Profile</div>
+    <div className="text-blue-500">Hello, Tailwind!</div>
+
   )
 }
 
