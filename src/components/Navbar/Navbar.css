@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+.temp {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); */
+    /* font-size: lar; */
+}
+
+#heading{
+    border-right: .15em solid orange; /* The typwriter cursor */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        blink-caret .75s step-end infinite;
+    text-shadow:
+    0 0 7px #ffffffc1,
+    0 0 10px #FB2576,
+    0 0 21px #FB2576,
+    0 0 42px #FB2576,
+    0 0 82px #FB2576;
+}
+
+
+#friends {
+    text-shadow:
+    0 0 7px #ffffffc1,
+    0 0 10px #0fa,
+    0 0 21px #0fa,
+    0 0 42px #0fa,
+    0 0 82px #0fa;
+    transition: all 0.1s ease-in-out;
+}
+
+#profile {
+    text-shadow:
+    /* 0 0 7px #ffffffc1, */
+    0 0 10px #01fff4,
+    0 0 21px #01fff4,
+    0 0 42px #01fff4,
+    0 0 82px #01fff4;
+    transition: all 0.1s ease-in-out;
+}
+#notifications {
+    text-shadow:
+    /* 0 0 7px #ffffffc1, */
+    0 0 10px #fff205,
+    0 0 21px #fff205,
+    0 0 42px #fff205,
+    0 0 82px #fff205;
+    transition: all 0.1s ease-in-out;
+}
+#dash {
+    text-shadow:
+    /* 0 0 7px #ffffffc1, */
+    0 0 10px #ffa500,
+    0 0 21px #ffa500,
+    0 0 42px #ffa500,
+    0 0 82px #ffa500;
+    transition: all 0.1s ease-in-out;
+}
+
+#logout {
+    text-shadow:
+    /* 0 0 7px #ffffffc1, */
+    0 0 10px #9400FF,
+    0 0 21px #9400FF,
+    0 0 42px #9400FF,
+    0 0 82px #9400FF;
+    transition: all 0.1s ease-in-out;
+}
+
+#leaderboard{
+    text-shadow:
+    /* 0 0 7px #ffffffc1, */
+    0 0 10px #F0D9E7,
+    0 0 21px #F0D9E7,
+    0 0 42px #F0D9E7,
+    0 0 82px #F0D9E7;
+    transition: all 0.1s ease-in-out;
+}
+
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+#dash:hover, #profile:hover, #notifications:hover, #friends:hover, #logout:hover, #leaderboard:hover {
+    text-shadow:
+    0 0 7px #ffffffc1,
+    0 0 10px #FB2576,
+    0 0 21px #FB2576,
+    0 0 42px #FB2576,
+    0 0 82px #FB2576;
+}

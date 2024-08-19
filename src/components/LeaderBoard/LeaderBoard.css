@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap");
+.mainFriendsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-style: solid; */
+  /* border-color: black; */
+  /* border-width: 20px; */
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+}
+
+.full-container {
+  /* font-family: pixelatedFont; */
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: large;
+  max-height: 93.1vh;
+  /* overflow: scroll; */
+}
+
+.ballOne {
+  position: relative;
+  animation: ballOneAnimate 5s ease-in-out infinite;
+}
+
+.ballTwo {
+  position: relative;
+  animation: ballTwoAnimate 5s ease-in-out infinite;
+}
+
+@keyframes ballOneAnimate {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes ballTwoAnimate {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mainFriendsManagementDiv {
+  position: absolute;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  font-family: pixelatedFont;
+}
+
+.friendsManagementLeftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.friendListHeader {
+  font-family: pixelatedFont;
+  margin-bottom: 20px;
+}
+
+@font-face {
+  font-family: pixelatedFont;
+  src: url("./assets/warfare.ttf");
+}
+
+.friendsManagementRightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px;
+}
+
+.searchFriends {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+}
+
+#friend-btn {
+  position: absolute;
+  top: 20%;
+  right: 3%;
+}
+
+/* #search-btn { */
+  /* position: absolute; */
+  /* top: 20%; */
+  /* right: 3%; */
+/* } */
+
+#default-search {
+  padding-left: 50px;
+}
+
+#changew {
+  min-width: 100%;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px 0;
+  background: none;
+}
+
+.first {
+  /* text-shadow:
+    0 0 7px #ffffffc1,
+    0 0 10px #25fb82,
+    0 0 21px #25fb82,
+    0 0 42px #25fb82,
+    0 0 82px #25fb82; */
+
+  box-shadow: 0 0 7px #ffffffc1,
+    /* 0 0 10px #25fb82, */ /* 0 0 21px #25fb82, */ 0 0 42px #25fb82;
+  /* 0 0 82px #25fb82; */
+}
+
+.first:hover {
+  cursor: pointer;
+  animation: hoverAnimationOne 0.5s ease-in-out infinite;
+}
+
+@keyframes hoverAnimationOne {
+  0% {
+    box-shadow: 0 0 0px #ffffffc1, 0 0 0px #25fb82;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffffc1, 0 0 62px #25fb82;
+  }
+  0% {
+    box-shadow: 0 0 0px #ffffffc1, 0 0 0px #25fb82;
+  }
+}
+
+.second {
+  /* text-shadow:
+    0 0 7px #ffffffc1,
+    0 0 10px #fbfb25,
+    0 0 21px #fbfb25,
+    0 0 42px #fbfb25,
+    0 0 82px #fbfb25; */
+
+  box-shadow: 0 0 7px #ffffffc1,
+    /* 0 0 10px #fbfb25, */ /* 0 0 21px #fbfb25, */ 0 0 42px #fbfb25;
+  /* 0 0 82px #fbfb25; */
+}
+
+.second:hover {
+  cursor: pointer;
+  animation: hoverAnimationTwo 0.5s ease-in-out infinite;
+}
+
+@keyframes hoverAnimationTwo {
+  0% {
+    box-shadow: 0 0 0px #ffffffc1, 0 0 0px #fbfb25;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffffc1, 0 0 62px #fbfb25;
+  }
+  0% {
+    box-shadow: 0 0 0px #ffffffc1, 0 0 0px #fbfb25;
+  }
+}
