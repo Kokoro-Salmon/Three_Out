@@ -1,0 +1,42 @@
+.tictactoe {
+  position: absolute;
+}
+
+.square {
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  width: 100px;
+  height: 100px;
+  color: white;
+  border: 2px solid rgba(41, 236, 142, 0.918);
+  box-shadow: 0 0 50px rgb(0, 255, 106);
+  position: relative;
+}
+
+.square-row {
+  display: flex;
+}
+
+.cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  color: rgba(226, 57, 5, 0.925);
+  text-shadow: 0 0 25px red;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  color: rgba(5, 226, 23, 0.925);
+  text-shadow: 0 0 25px rgb(5, 226, 23);
+}
